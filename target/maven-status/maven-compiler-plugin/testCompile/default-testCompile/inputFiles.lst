@@ -1,2 +1,6 @@
 /home/vitalii/IdeaProjects/junit/src/test/java/com/inventorsoft/junit/calculator/CalculatorTest.java
 /home/vitalii/IdeaProjects/junit/src/test/java/com/inventorsoft/junit/calculator/CalculatorJunit5Test.java
+/home/vitalii/IdeaProjects/junit/src/test/java/com/inventorsoft/junit/csv/CsvRepositoryTest.java
+/home/vitalii/IdeaProjects/junit/src/test/java/com/inventorsoft/junit/csv/CsvControllerTest.java
+/home/vitalii/IdeaProjects/junit/src/test/java/com/inventorsoft/junit/calculator/CalculatorParametrizedTest.java
+/home/vitalii/IdeaProjects/junit/src/test/java/com/inventorsoft/junit/csv/CsvServiceTest.java

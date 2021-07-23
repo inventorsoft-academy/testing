@@ -3,6 +3,7 @@ package com.inventorsoft.junit.calculator;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.assertEquals;
@@ -41,7 +42,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void test_subtract_two_negative_result_negative() {
+    public void test_multiply_two_zero_result_zero() {
         assertEquals(0, calculator.multiply(0, 0));
     }
 
@@ -51,31 +52,31 @@ public class CalculatorTest {
     }
 
     @Test
-    public void test_multiply_zero_result_zero() {
+    public void test_multiply_with_zero_result_zero() {
         assertEquals(0, calculator.multiply(10, 0));
     }
 
     @Test
-    public void test_divide_same_result_one() {
+    public void test_divide_same_result_one() throws Throwable {
         assertEquals(1, calculator.divide(10, 10));
     }
 
-    @Test(expected = UnsupportedOperationException.class)
-    public void testDividingZeroShouldThrowsException1() {
+    @Test(expected = DivisionByZeroThrowable.class)
+    public void testDividingZeroShouldThrowsException1() throws Throwable {
         calculator.divide(5, 0);
     }
 
     @Test
     public void testDividingZeroShouldThrowsException2() {
-        assertThrows(UnsupportedOperationException.class, () -> {
-            calculator.divide(5, 0);
-        });
+        assertThrows("Cannot divide by zero!",DivisionByZeroThrowable.class, () ->
+                calculator.divide(5, 0)
+        );
     }
 
     @Test
-    public void testDividingZeroShouldThrowsException3() {
-        expectedException.expect(UnsupportedOperationException.class);
-        expectedException.expectMessage("Cannot divide by zero");
+    public void testDividingZeroShouldThrowsException3() throws Throwable {
+        expectedException.expect(DivisionByZeroThrowable.class);
+        expectedException.expectMessage("Cannot divide by zero!");
 
         calculator.divide(5, 0);
     }

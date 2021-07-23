@@ -32,19 +32,24 @@ public class CalculatorJunit5Test {
     }
 
     @Test
+    void test_subtract_two_negative_arguments_zero_result() {
+        assertEquals(0, calculator.substract(-20, -20));
+    }
+
+    @Test
     void test_multiply_zero_result_zero() {
         assertEquals(0, calculator.multiply(10, 0));
     }
 
     @Test
-    void test_divide_same_result_one() {
+    void test_divide_same_result_one() throws Throwable {
         assertEquals(1, calculator.divide(10, 10));
     }
 
     @Nested
     @DisplayName("Sum tests")
     class SumTest {
-        @Test
+        @Test()
         void test_sum_two_positive_result_positive() {
             assertEquals(20, calculator.sum(10, 10));
         }
@@ -56,7 +61,8 @@ public class CalculatorJunit5Test {
 
         @Test
         void test_sum_two_zero_result_zero() {
-            assertEquals(0, calculator.sum(0, 0));
+            int sum = calculator.sum(0, 0);
+            assertEquals(0, sum);
         }
     }
 

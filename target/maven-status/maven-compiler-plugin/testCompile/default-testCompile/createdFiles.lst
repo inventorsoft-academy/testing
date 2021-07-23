@@ -1,0 +1,7 @@
+com/inventorsoft/junit/csv/CsvServiceTest.class
+com/inventorsoft/junit/calculator/CalculatorParametrizedTest.class
+com/inventorsoft/junit/csv/CsvRepositoryTest.class
+com/inventorsoft/junit/calculator/CalculatorTest.class
+com/inventorsoft/junit/csv/CsvControllerTest.class
+com/inventorsoft/junit/calculator/CalculatorJunit5Test.class
+com/inventorsoft/junit/calculator/CalculatorJunit5Test$SumTest.class

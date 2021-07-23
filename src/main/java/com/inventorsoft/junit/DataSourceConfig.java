@@ -1,4 +1,4 @@
-package com.inventorsoft.junit.csv;
+package com.inventorsoft.junit;
 
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
@@ -14,7 +14,7 @@ public class DataSourceConfig {
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.driverClassName("org.h2.Driver");
         dataSourceBuilder.url("jdbc:h2:mem:test");
-        dataSourceBuilder.username("SA");
+        dataSourceBuilder.username("testDb");
         dataSourceBuilder.password("");
         return dataSourceBuilder.build();
     }
